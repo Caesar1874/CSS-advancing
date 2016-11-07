@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏-主栏流动布局-负外边距</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*去掉wrapper,变成全宽页面*/
+        .container {
+            min-width: 600px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .article {
+            float: left;
+            width: 100%;
+            margin-right: -150px;
+
+
+        }
+        .article-inner {
+            border: 1px solid red;
+            margin-right:150px;
+        }
+        .aside {
+            float: left;
+            width: 150px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <article class ="article">
+            <div class = "article-inner">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, ex nisi? Asperiores atque consectetur dolorem dolores expedita illum in ipsam necessitatibus nobis porro possimus provident quis, soluta temporibus vel vero voluptas? Accusantium, aperiam delectus est et, explicabo fugit harum laboriosam laborum laudantium minima natus neque nostrum nulla officia placeat, possimus quaerat qui quibusdam sequi sit? Amet animi dolor doloremque id nostrum possimus recusandae sint, ut? Adipisci aliquid amet asperiores aut corporis dolorum, eum explicabo facere illo in ipsum iusto labore laborum necessitatibus nihil nisi nobis non perferendis placeat quas quo reprehenderit sed sunt tempore, velit voluptatem voluptatibus. Fugit, laborum, ut.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus dolore fugiat ipsum neque odit perferendis rem tempora? Alias animi at ea quod recusandae reiciendis tempore vero voluptate voluptatem. Ab deserunt dolore ducimus eveniet id incidunt minus placeat sed voluptatibus? A debitis deserunt doloribus incidunt nemo quae repellat sint, unde. Accusantium doloremque expedita fuga harum, incidunt, iste nihil nobis obcaecati optio, quisquam rem sequi tempora ullam! Beatae, consequatur facere officia saepe similique ullam veniam veritatis voluptatum. Aliquam deleniti deserunt earum eos esse excepturi explicabo facere itaque magni natus nihil quis rerum, veritatis voluptate voluptatibus? Ab aliquam placeat quae sit velit.
+            </div>
+        </article>
+        <aside class = "aside">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at cumque excepturi exercitationem iusto nam nesciunt nobis, non officiis, quae quos, velit veritatis. Ab alias, animi assumenda autem delectus doloribus eligendi est et, ex itaque laboriosam laudantium minima nesciunt nihil nostrum officia perspiciatis quaerat quasi quia quidem quod velit voluptas.
+        </aside>
+    </div>
+</body>
+</html>

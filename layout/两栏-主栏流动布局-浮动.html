@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏-主栏流动布局-浮动</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*去掉container,变成全宽页面*/
+        .container {
+            min-width: 600px;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid blue;
+        }
+
+        .aside {
+            /*关键代码*/
+            float: left;
+            width: 150px;
+
+            border: 1px solid green;
+        }
+
+        .article {
+            /*关键代码*/
+            width: auto;
+            margin-left: 150px;
+
+            border: 1px solid red;
+        }
+
+        /*该方法的问题在于*/
+        /*1. html中侧栏要在主栏之前*/
+
+        /*侧栏在右*/
+        /*float: right*/
+        /*margin: right*/
+
+        /*不能设置主栏 width: 100%*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <aside class = "aside">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at cumque excepturi exercitationem iusto nam nesciunt nobis, non officiis, quae quos, velit veritatis. Ab alias, animi assumenda autem delectus doloribus eligendi est et, ex itaque laboriosam laudantium minima nesciunt nihil nostrum officia perspiciatis quaerat quasi quia quidem quod velit voluptas.
+    </aside>
+    <article class = "article">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at aut blanditiis consectetur debitis dolorum earum fuga iure mollitia non quidem, similique sit soluta voluptatum! Architecto, beatae blanditiis consectetur, cupiditate debitis dolore eius eos numquam officia provident quo ratione repellendus velit voluptas voluptates? Accusantium aliquid, consequuntur cum deserunt dicta, excepturi facere facilis in inventore iusto laborum nam, necessitatibus neque nesciunt nisi nulla officiis quae quam quis saepe tempora voluptate voluptates? A architecto aspernatur atque blanditiis commodi consequatur consequuntur debitis deleniti dignissimos dolorem facilis fuga fugiat hic iure magnam maxime modi molestiae molestias mollitia natus neque nihil obcaecati odio quam quibusdam quidem quis reiciendis rem rerum soluta suscipit tempora tempore temporibus, ut vel voluptas voluptatem! Assumenda culpa ea eaque error fuga fugiat, illo quasi quidem quod quos rerum veniam voluptas! Adipisci aspernatur aut autem, blanditiis dolorem dolorum eligendi error, et fugiat illo impedit magni minima minus modi molestias mollitia natus nisi non numquam odit, pariatur porro quaerat quos repudiandae saepe sunt vero vitae. Ab alias aliquam aspernatur assumenda autem dicta dolorem enim eos error facere id incidunt ipsa iste itaque laboriosam libero magnam maiores maxime minima molestias nam, nihil nobis omnis perferendis praesentium quae quasi quis quod reprehenderit rerum sapiente sequi velit voluptate? Accusamus ad assumenda beatae blanditiis corporis, culpa dicta dignissimos distinctio earum eius eligendi enim error eum ex facere hic incidunt inventore ipsa libero magni minima nostrum numquam perferendis, placeat porro quae repellat repudiandae soluta voluptas voluptatem. Architecto atque aut corporis cum dicta eaque eveniet exercitationem hic impedit maiores necessitatibus, nemo non numquam porro quos sed totam vitae voluptas! Amet cum cumque dignissimos distinctio impedit odit praesentium quis sequi suscipit. Ab accusantium alias amet animi architecto aspernatur beatae, cumque cupiditate debitis deleniti deserunt ducimus earum eum ex exercitationem facere illo itaque labore magnam maxime minus modi necessitatibus nesciunt nisi non officia placeat provident quaerat quia quis quo quod recusandae suscipit temporibus unde vel veniam. Delectus dignissimos doloribus, earum eveniet explicabo facilis, ipsum iure odit officia pariatur possimus provident quasi rem repellendus voluptas! A ad aperiam autem cupiditate dicta distinctio dolore esse eum illum modi molestiae molestias nam, necessitatibus nesciunt nihil, nulla odio provident quaerat recusandae repellat sit sunt totam! Aperiam cumque eius exercitationem, labore laudantium molestias nulla obcaecati odit quam veritatis. Ab accusantium, commodi consectetur culpa dolorem ea earum eligendi esse explicabo fuga fugit id illum iste laborum maiores maxime minima molestiae mollitia nihil non odio optio perspiciatis porro quae quaerat quam quidem quod reiciendis similique sit tempore tenetur, ullam unde vel veritatis vero voluptatem? Aspernatur dolores eos inventore laudantium veniam. Blanditiis corporis distinctio doloremque eum eveniet illo itaque iure laboriosam laborum libero maiores molestiae non possimus qui quia quibusdam quidem quod, sed similique soluta suscipit, tenetur ut vitae, voluptas voluptate? A ad amet asperiores aspernatur aut beatae blanditiis commodi consectetur consequatur cum delectus deleniti deserunt dolore earum et excepturi hic, illum iste iure libero maiores odit officiis placeat possimus quo ratione, rerum sapiente temporibus totam ullam ut vel veniam veritatis? Cumque cupiditate eius eos quisquam tenetur voluptates.
+    </article>
+
+</div>
+</body>
+</html>
