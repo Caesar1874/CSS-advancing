@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            outline: 1px solid green;
+            margin: 10px 0;
+        }
+        span {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--text-align  -->
+    <!--指定行内框在行框中的对齐方式-->
+    <div style = "text-align: center;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+
+    <div style = "text-align: left;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+
+    <div style = "text-align: right;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <!--用于块级元素，可以继承-->
+    <div style = "text-align: center;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <!--继承-->
+        <div style="width: 500px;">
+            Quam, reprehenderit.
+        </div>
+    </div>
+</body>
+</html>

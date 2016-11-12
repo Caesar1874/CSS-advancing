@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--父元素高度不确定: -->
+    <!--匿名文本，图片和块级元素-->
+<div style="padding: 80px 0;">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid culpa ea ipsa magni officiis porro quo? Adipisci animi at aut consectetur consequatur culpa cum dignissimos dolor fuga id illo itaque laboriosam magnam modi nam neque nisi nobis officia perferendis quo quos reprehenderit repudiandae, tempora tempore ullam vel veritatis voluptatibus.
+</div>
+
+<div style="padding: 80px 0;">
+    <img src="center.PNG" alt="">
+</div>
+
+<div style="padding: 80px 0;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, adipisci autem dolorum ea eos excepturi expedita fugit inventore ipsa iste libero magnam minima nobis non nostrum nulla pariatur praesentium provident quaerat quia quidem reiciendis sit suscipit temporibus vero voluptates! Eligendi mollitia placeat possimus, quos rem sed tempore? Rerum, tempore.</p>
+</div>
+
+<!--此处设置border阻止margin合并-->
+<div style="border: 1px solid red;">
+    <p style="margin: 80px 0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, adipisci autem dolorum ea eos excepturi expedita fugit inventore ipsa iste libero magnam minima nobis non nostrum nulla pariatur praesentium provident quaerat quia quidem reiciendis sit suscipit temporibus vero voluptates! Eligendi mollitia placeat possimus, quos rem sed tempore? Rerum, tempore.</p>
+</div>
+
+
+
+</body>
+</html>

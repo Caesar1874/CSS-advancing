@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-middle</title>
+    <style>
+       div {
+           outline: 1px solid red;
+       }
+        span {
+            outline: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+<!--父元素高度确定： 单行匿名文本或行内元素垂直居中-->
+    <!--增加文本查看行框-->
+<div style="height: 100px; line-height: 100px;">
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, magnam.
+    </span>
+</div>
+
+<!--父元素高度确定： 多行匿名文本，图片和块级元素垂直居中-->
+<div style="height: 300px; line-height: 300px;">
+    <p style="display: table-cell; vertical-align: middle;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</div>
+
+</body>
+</html>
