@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform_function_translate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            border: 1px solid gray;
+            perspective: 1000px;
+        }
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            opacity: 0.7;
+            line-height: 100px;
+            text-align: center;
+
+        }
+        .initial, .translate, .translateX, .translateY, .translateZ, .translate3d {
+            position: absolute;
+            left: 30%;
+        }
+
+        .translate {
+            animation: translate 2s ease-in-out infinite;
+
+        }
+        .translateX {
+            animation: translateX 2s ease-in-out infinite;
+        }
+        .translateY {
+            animation: translateY 2s ease-in-out infinite;
+        }
+        .translateZ {
+            animation: translateZ 2s ease-in-out infinite;
+            background-color: indianred;
+        }
+        .translate3d {
+            animation: translate3d 2s ease-in-out infinite;
+        }
+
+
+
+        @keyframes translate {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(250px, 250px);
+            }
+        }
+        @keyframes translateX {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(250px);
+            }
+        }
+        @keyframes translateY {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(250px);
+            }
+        }
+        @keyframes translateZ {
+            from {
+                transform: translateZ(0);
+            }
+            to {
+                transform: translateZ(250px);
+            }
+        }
+        @keyframes translate3d {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            to {
+                transform: translate3d(250px, 250px, 250px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="initial">initial</div>
+    <div class="translate">translate</div>
+    <div class="translateX">translateX</div>
+    <div class="translateY">translateY</div>
+    <div class="translateZ">translateZ</div>
+    <div class="translate3d">translate3d</div>
+</body>
+</html>

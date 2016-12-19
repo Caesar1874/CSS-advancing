@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skew</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            border: 1px solid gray;
+        }
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            background-color: yellowgreen;
+            opacity: 0.7;
+        }
+        .skew, .skewX, .skewY {
+            position: absolute;
+            left: 0;
+        }
+        .skew {
+            animation: skew 2s ease-in-out infinite;
+            background-color: orange;
+        }
+        .skewX {
+            animation: skewX 2s ease-in-out infinite;
+            background-color: yellow;
+        }
+        .skewY {
+            animation: skewY 2s ease-in-out infinite;
+            background-color:  green;
+        }
+        @keyframes skew {
+            from {
+                transform: skew(0deg, 0deg);
+            }
+            to {
+                transform: skew(40deg, 40deg);
+
+            }
+        }
+        @keyframes skewX {
+            from {
+                transform: skewX(0deg)
+            }
+            to {
+                transform: skewX(40deg);
+            }
+        }
+        @keyframes skewY {
+            from {
+                transform: skewY(0deg);
+            }
+            to {
+                transform: skewY(40deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>initial</div>
+    <div class="skewX">skewX</div>
+    <div class="skewY">skewY</div>
+    <div class="skew">skew</div>
+</body>
+</html>

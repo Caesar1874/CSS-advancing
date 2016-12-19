@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D transform rendering</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+        }
+        .container {
+            border: 1px solid gray;
+        }
+        .rotateY {
+            transform: perspective(500px) rotateY(50deg) ;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rotateY"></div>
+    </div>
+</body>
+</html>

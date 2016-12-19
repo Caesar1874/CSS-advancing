@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition example</title>
+    <style>
+        div {
+            width: 1000px;
+            background-color: #000;
+            opacity: 1;
+
+            transition-property: width, opacity;
+            transition-duration: 1s, 5s;
+        }
+        .transition{
+            width: 500px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="transition-target">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cupiditate dolorum earum explicabo facere, ipsum quaerat repellendus sequi vel vero?
+    </div>
+
+    <script>
+        window.onload = function() {
+            var div = document.getElementsByClassName("transition-target")[0];
+            console.log(div);
+            div.classList.add("transition");
+        }
+    </script>
+</body>
+</html>

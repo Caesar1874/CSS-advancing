@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform_function_rotate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            border: 1px solid gray;
+
+            perspective: 1000px;
+        }
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            line-height: 200px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        .rotate {
+            animation: rotate 2s ease-in-out infinite;
+            background-color: orangered;
+            
+        }
+        .rotateX {
+            animation: rotateX 2s ease-in-out infinite;
+            background-color: greenyellow;
+        }
+        .rotateY {
+            animation: rotateY 2s ease-in-out infinite;
+            background-color: cornflowerblue;
+        }
+        
+        .rotateZ {
+            animation: rotateZ 2s ease-in-out infinite;
+            background-color: darkorchid;
+        }
+
+        .rotate3d {
+            animation: rotate3d 2s ease-in-out infinite;
+            background-color: green;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateX {
+            0% {
+                transform: rotateX(0deg);
+            }
+            100% {
+                transform: rotateX(360deg);
+            }
+        }
+        @keyframes rotateY {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        @keyframes rotateZ {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+        @keyframes rotate3d {
+            from {
+                transform: rotate3d(1, 1, 1, 0deg);
+            }
+            to {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rotate">rotate</div>
+    <div class="rotateX">rotateX</div>
+    <div class="rotateY">rotateY</div>
+    <div class="rotateZ">rotateZ</div>
+    <div class="rotate3d">rotate3d</div>
+
+</body>
+</html>
