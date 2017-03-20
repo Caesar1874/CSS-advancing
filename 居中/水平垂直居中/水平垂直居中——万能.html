@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        /* 该方式是万能的
+         * container 的宽高可以是不确定的
+         * box 的宽高可以是不确定的
+         * box  可以是行内元素*/
+        .box {
+            /*display: inline;*/
+           /* width: 50px;
+            height: 50px;*/
+            border: 1px solid green;
+
+            /*关键代码*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /*transform: translateX(-50%) translateY(-50%);*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, quam.lorem10, consectetur adipisicing elit. Adipisci, quam.lorem10</div>
+</div>
+</body>
+</html>
