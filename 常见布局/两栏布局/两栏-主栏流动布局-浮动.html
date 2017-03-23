@@ -17,10 +17,14 @@
             border: 1px solid blue;
         }
 
+        /* 新要求： 较高的一个出现滚动条：假定较高的设置了高度，同时指定overflow: auto */
         .aside {
             /*关键代码*/
             float: left;
             width: 150px;
+
+            /* 滚动 */
+            overflow: auto;
 
             border: 1px solid green;
         }
@@ -29,6 +33,10 @@
             /*关键代码*/
             width: auto;
             margin-left: 150px;
+
+            /* 滚动 */
+            height: 1000px;
+            overflow: auto;
 
             border: 1px solid red;
         }
