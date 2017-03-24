@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* link 与 @import 区别
+            1. link 是 HTML 标签，@import 是css 方式
+                - 兼容性
+                - DOM操作
+                - @import 模块化
+                - @import  响应式
+            2. 加载顺序
+                - link 与页面同时加载
+                - @import  页面加载完后加载
+            3. 优先级
+                - link 优先级高于 @import
+
+        */
+    </style>
+</head>
+<body>
+
+<div id="example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, molestiae!</div>
+
+<h5>link 与 @import 区别</h5>
+<ol>
+    <li>link 是 HTML 标签，@import 是css 方式</li>
+    <ul>
+        <li>兼容性: @import 低于 ie5 不支持</li>
+        <li>DOM操作</li>
+        <li>@import 模块化</li>
+        <li>@import 响应式</li>
+    </ul>
+    <li>加载顺序</li>
+    <ul>
+        <li>link 与页面同时加载，defered控制</li>
+        <li>@import 页面加载完后加载</li>
+    </ul>
+    <li>优先级</li>
+    <ul>
+        <li>link 优先级高于 @import</li>
+    </ul>
+</ol>
+</body>
+</html>
