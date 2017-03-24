@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<button class="btn btn-blue">
+    <em>Confirm</em>
+</button>
+<script>
+
+    // 对应的json对象
+    var btn = {
+        type: "button",
+        props: {
+            className: "btn, btn-blue",
+            children: {
+                type: "em",
+                props: {
+                    children: "confirm"
+                }
+            }
+        }
+    };
+
+    // 公共方法
+    const Button = ({color, text}) => {
+        return (
+            {
+                type: "button",
+                props: {
+                    className: `btn, btn-${color}`,
+                    children: {
+                        type: "em",
+                        props: {
+                            children: text
+                        }
+                    }
+                }
+            }
+        )
+    }
+
+    var Button = {
+        type: Button,
+        props: {
+            color: "blue",
+            children: "confirm"
+        }
+    }
+
+    const dangerButton = ({text}) => ({
+        type: Button,
+        props: {
+            color: red,
+            children: text
+        }
+    })
+
+    const DeleteAccount = () => ({
+        type: "div",
+        props: {
+            children: [
+                {
+                    type: "p",
+                    props: {
+                        children: "are you sure?",
+                    }
+                },
+                {
+                    type: DangerButton,
+                    props: {
+                        children: "confirm",
+                    }
+                },
+                {
+                    type: Button,
+                    props: {
+                        color: "blue",
+                        children: "cancel"
+                    }
+                }
+            ]
+    }
+    });
+
+    const DeleteAccount = () => (
+        <div>
+            <p>Are you sure</p>
+            <DangerButto>Confirm</DangerButto>
+            <Button color="blue"></Button>
+        </div>
+    );
+
+    const Alert = (text)=> {
+        return (
+                <p>{text}</p>
+
+        )
+    };
+
+    // 等价于
+    const Alert = {
+        type: "p",
+        props: {
+            children: text
+        }
+    };
+
+</script>
+</body>
+</html>

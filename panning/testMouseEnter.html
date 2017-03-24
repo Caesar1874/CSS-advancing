@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+        .inner {
+            width: 80%;
+            height: 80%;
+            background-color: indianred;
+            border: 1px solid green;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        var innerhtml = "<div class='inner'></div>";
+        var i = 0;
+        window.onload = function() {
+            document.getElementById("container").addEventListener("mouseenter", function(event){
+//                event.target.insertAdjacentHTML("beforeend", "<div class='inner'></div>");
+
+                console.log(innerhtml);
+                event.target.innerHTML = innerhtml;
+                innerhtml += `<div class='inner'>${i++}</div>`;
+
+                console.log("enter")
+            });
+        };
+        // event.target.insertAdjacentHTML("beforeend", "<div class='inner'></div>");
+        /*document.getElementsByClassName("container")[0].addEventListener("mouseleave", function(event){
+         event.target.removeChild(document.getElementsByClassName("inner")[0]);
+         console.log("leave")
+         })*/
+    </script>
+</body>
+</html>
