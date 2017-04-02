@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<style>
+    #test {
+        position: absolute;
+        border-bottom: 100px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        animation: rotate 5s infinite linear;
+        user-focus-key: none;
+    }
+
+    @keyframes rotate {
+        0% {
+            border-bottom-color: red;
+            top: 0;
+            left: 0;
+        }
+        25% {
+            border-bottom-color: yellow;
+            top: 0;
+            left: 200px;
+        }
+        50% {
+            border-bottom-color: blue;
+            top: 200px;
+            left: 200px;
+        }
+        75% {
+            border-bottom-color: green;
+            top: 200px;
+            left: 0;
+        }
+        100% {
+            border-bottom-color: red;
+            top: 0;
+            left: 0;
+        }
+    }
+</style>
+<body>
+<div id="test">
+
+</div>
+<script src="test.js">
+
+</script>
+</body>
+</html>

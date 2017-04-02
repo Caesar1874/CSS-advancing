@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+        .load {
+            width: 60px;
+            height: 60px;
+            border: 10px solid #64efb9;
+            animation: rotate 1.5s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: perspective(180px);
+            }
+            50% {
+                transform: perspective(180px) rotateX(180deg);
+            }
+            to {
+                transform: perspective(180px) rotateX(180deg) rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="load"></span>
+    </div>
+</body>
+</html>

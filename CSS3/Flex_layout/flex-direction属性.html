@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-direction属性</title>
+    <style>
+        /*基本样式start*/
+        article {
+            display: flex;
+            margin-top: 10px;
+            background-color: oldlace;
+        }
+        section {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            background-color: orange;
+        }
+        /*基本样式end*/
+
+        /*flex-direciton属性*/
+        .flex-direction-row {
+            flex-direction: row;
+        }
+        .flex-direction-rowReverse {
+            flex-direction: row-reverse;
+        }
+        .flex-direction-column {
+            flex-direction: column;
+        }
+        .flex-direction-columnReverse {
+            flex-direction: column-reverse;
+        }
+        /*flex-direction属性end*/
+    </style>
+</head>
+<body>
+
+<!--display: flex-->
+
+<!--flex-direction-->
+    <article class="flex-direction-row">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+
+    <article class="flex-direction-rowReverse">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+
+    <article class="flex-direction-column">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+
+    <article class="flex-direction-columnReverse">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+</body>
+</html>

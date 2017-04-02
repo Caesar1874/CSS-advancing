@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            perspective: 500px;
+            perspective-origin: 30% 30%;
+        }
+        div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 200px) rotate3d(1, 1, 1, 30deg) scaleZ(0.4);
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        scaleZ
+    </div>
+</body>
+</html>

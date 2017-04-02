@@ -1,0 +1,55 @@
+van<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: blue;
+        }
+
+        .translate {
+            /*transform: translate(100px, 100px);*/
+        }
+
+        .rotate {
+            transform-origin: 50px 50px;
+            transform: rotate(45deg);
+        }
+
+        .scale {
+            transform: translate(80px, 80px) scale(1.5, 1.5) rotate(45deg);
+        }
+
+        span {
+            position: fixed;
+            top: 100%;
+            left: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="translate"></div>
+    <div class="rotate"></div>
+    <div class="scale">
+        <span>Lorem ipsum dolor sit amet.</span>
+    </div>
+
+    <!--通过叠加形成与scale相同的效果: 好像不能-->
+    <article style = "transform: translate(80px, 80px)">
+        <section style="transform: scale(1.5, 1.5)">
+            <div style="transform: rotate(45deg)"></div>
+        </section>
+    </article>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+
+</body>
+</html>

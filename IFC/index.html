@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 约定
+        * margin
+        * padding
+        */
+        #container {
+            width: 960px;
+            border: 1px solid green;
+            margin: 0 auto;
+        }
+
+        span {
+            border: 1px solid indianred;
+        }
+
+        .box-model {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .inline-align {
+            text-align: center;
+        }
+
+        .inline-height {
+            line-height: 60px;
+            height: 200px;
+            color: red;
+
+            /* 不影响高度*/
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .float-left {
+            float: left;
+            background-color: yellowgreen;
+            width: 300px;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2>行内框</h2>
+
+    <h3>水平方向</h3>
+    <h6>行内框的宽度由内容决定</h6>
+    <span>Lorem ipsum dolor sit amet.</span>
+    <br>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, tempore!</span>
+
+    <hr>
+
+    <h6>行内框之间存在着水平的margin, bordered, padding</h6>
+    <span class="box-model">Lorem ipsum dolor sit amet.</span>
+    <span class="box-model">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+
+    <hr>
+
+    <h6>所有行内框的宽度小于行框</h6>
+    <div class="inline-align">
+        <span>第一行： </span><span>Lorem ipsum dolor.</span><span>Lorem ipsum dolor.</span>
+        <br>
+        <span>第二行： </span><span>Lorem ipsum dolor.</span><span>Lorem ipsum dolor.</span>
+    </div>
+
+    <h3>垂直方向</h3>
+    <h6>非替换元素行内框的高度有 line-hight 决定，hight不适用</h6>
+    <p>
+        Lorem ipsum dolor sit amet,consectetur adipisicing elit. Corporis debitis dolorem dolores est itaque libero
+        magnam maxime minima, molestias numquam, odio, odit possimus qui quibusdam recusandae saepe sed ut voluptatum.
+        <span class="inline-height">注意行高的变化, margin和padding 无影响</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores commodi consequatur cum ducimus eum
+        expedita magnam officia provident quae quam quis ratione sed tempora, voluptates. Architecto at fuga suscipit!
+    </p>
+
+    <h6>替换元素和inline-block元素的高度就是外边距框的高度</h6>
+    <p>
+        Lorem ipsum dolor sit amet,consectetur adipisicing elit. Corporis debitis dolorem dolores est itaque libero
+        magnam maxime minima, molestias numquam, odio, odit possimus qui quibusdam recusandae saepe sed ut voluptatum.
+        <img src="行高.PNG" alt="">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores commodi consequatur cum ducimus eum
+        expedita magnam officia provident quae quam quis ratione sed tempora, voluptates. Architecto at fuga suscipit!
+    </p>
+
+    <h2>行框</h2>
+    <h6>行框的宽度由包含块的宽度和浮动框决定</h6>
+    <div>
+        <div class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, distinctio?</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus tenetur, vero? Aspernatur autem eum nihil, quas repellendus reprehenderit! Aperiam consequatur cum et exercitationem harum in laudantium maxime odio sapiente sed?</p>
+    </div>
+
+    <h6>行框的高度</h6>
+    <p>
+        Lorem ipsum dolor sit amet,consectetur adipisicing elit. Corporis debitis dolorem dolores est itaque libero
+        magnam maxime minima, molestias numquam, odio, odit possimus qui quibusdam recusandae saepe sed ut voluptatum.
+       <span>未完待续</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores commodi consequatur cum ducimus eum
+        expedita magnam officia provident quae quam quis ratione sed tempora, voluptates. Architecto at fuga suscipit!
+    </p>
+
+
+
+</div>
+</body>
+</html>

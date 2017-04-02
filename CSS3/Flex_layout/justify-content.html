@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>justify content属性</title>
+    <style>
+        /*基本样式start*/
+        article {
+            display: flex;
+            margin-top: 10px;
+            background-color: oldlace;
+        }
+        section {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            background-color: orange;
+        }
+        /*基本样式end*/
+
+        /*justify-content属性*/
+        .justify-content-start {
+            justify-content: flex-start;
+        }
+        .justify-content-end {
+            justify-content: flex-end;
+        }
+        .justify-content-center {
+            justify-content: center;
+        }
+        .justify-content-spaceBetween {
+            justify-content: space-between;
+        }
+        .justify-content-spaceAround {
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <article class="justify-content-start">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+    <article class="justify-content-end">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+    <article class="justify-content-center">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+    <article class="justify-content-spaceBetween">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+    <article class="justify-content-spaceAround">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+    </article>
+
+
+</body>
+</html>

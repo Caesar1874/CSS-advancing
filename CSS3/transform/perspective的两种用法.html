@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>perspective的两种用法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            max-width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #eee;
+        }
+        .perspective-parent {
+            /*perspective定义在变换元素的父元素上*/
+            perspective: 500px;
+        }
+        .perspective-parent > div, .perspective-self > div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+
+            transform: rotateY(45deg);
+            background-color: yellowgreen;
+        }
+        .perspective-self > div {
+            /*perspective定义在变换元素上*/
+            /*perspective一定要在3d变形之前定义*/
+            /*在元素使用perspective: 500px是不起作用的；*/
+            transform: perspective(500px) rotateY(45deg) ;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <article class="container">
+        <section class="perspective-parent">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section class="perspective-self">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </article>
+</body>
+</html>

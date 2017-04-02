@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body, .container {
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            background-color: darkseagreen;
+        }
+        .inner {
+            width: 50%;
+            height: 50%;
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner"></div>
+    </div>
+    <script>
+        window.onload = function() {
+            console.log(`设备像素——screen.width: ${screen.width}, screen.height: ${screen.height}`);
+            console.log(`视觉视口——innerWidth: ${window.innerWidth}; innerHeight: ${window.innerHeight}`);
+            console.log(`布局视口——${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`);
+            console.log(`html元素——${document.documentElement.offsetWidth}, ${document.documentElement.offsetHeight}`);
+//            console.log(`滚动距离——pageXOffset: ${window.pageXOffset}; pageYOffset:${window.pageYOffset}`);
+//            console.log(`文档尺寸——${document.getElementsByTagName("html")[0].scrollWidth}, ${document.getElementsByTagName("html")[0].scrollHeight}}`);
+
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>perspective</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            perspective: 500px;
+        }
+        div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            opacity: 0.7;
+            line-height: 100px;
+            text-align: center;
+            /*改变元素在Z轴的位置以理解perspective*/
+            animation: translated3d 2s ease-in-out infinite;
+        }
+        @keyframes translated3d {
+            from {
+                transform: translate3d(-50%, -50%, 0px);
+            }
+            to {
+                transform: translate3d(-50%, -50%, 480px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>perspective</div>
+</body>
+</html>

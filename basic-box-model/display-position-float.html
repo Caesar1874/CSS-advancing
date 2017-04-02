@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            display: block;
+            font-size: 12px;
+            line-height: 200%;
+            width: 200px;
+            height: 200px;
+        }
+        p {
+            display: block;
+        }
+        span {
+            display: inline;
+        }
+        #outer {
+            color: red;
+
+            /*相对定位*/
+            /*position: relative;*/
+            /*top: -12px;*/
+
+
+        }
+        #inner {
+            color: blue;
+
+            /*相对定位*/
+            /*position: relative;*/
+            /*top: 12px;*/
+
+            /*浮动*/
+            float: right;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        beginning of body contents.
+        <span id="outer"> start of outer contents
+            <span id="inner">inner contents</span>
+            end of outer contents
+        </span>
+        end of body content
+    </p>
+</body>
+</html>
