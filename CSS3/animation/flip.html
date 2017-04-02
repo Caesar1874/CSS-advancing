@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .example-1 {
+            width: 200px;
+            height: 200px;
+            background-image: url(image.jpg);
+            animation: flip-horizontal 5s ease-out infinite;
+        }
+        @keyframes flip-horizontal {
+            from {
+                transform: perspective(180px) rotateX(0deg);
+            }
+            to {
+                transform: perspective(180px) rotateX(360deg);
+            }
+        }
+
+        .example-2 {
+            width: 200px;
+            height: 200px;
+            background-image: url(image.jpg);
+            animation: flip-vertical 5s ease-out infinite;
+        }
+        @keyframes flip-vertical {
+            from {
+                transform: perspective(180px) rotateY(0deg);
+            }
+            to {
+                transform: perspective(180px) rotateY(360deg)
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="example-1"></div>
+<div class="example-2"></div>
+</body>
+</html>

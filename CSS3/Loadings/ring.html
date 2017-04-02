@@ -17,6 +17,7 @@
             height: 200px;
             border: 1px solid #ccc;
         }
+
         .load {
             position: relative;
             display: block;
@@ -26,7 +27,7 @@
             border-radius: 50%;
 
             /*关键样式*/
-            animation: move 2s ease-in infinite;
+            animation: rotation 2s ease-in infinite;
         }
         /*关键样式*/
         .load::before {
@@ -44,10 +45,9 @@
             margin-left: -10px;
             /*绝对定位相对content box，mt: -10将其拉到border上，-5实现垂直居中，*/
             margin-top: -15px;
-
         }
 
-        @keyframes move {
+        @keyframes rotation {
             from {
                 transform: rotate(0deg);
             }
