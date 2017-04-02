@@ -73,18 +73,18 @@
         }
         @keyframes translateZ {
             from {
-                transform: translateZ(0);
+                transform: perspective(500px) translateZ(0);
             }
             to {
-                transform: translateZ(250px);
+                transform: perspective(500px) translateZ(250px);
             }
         }
         @keyframes translate3d {
             from {
-                transform: translate3d(0, 0, 0);
+                transform: perspective(500px) translate3d(0, 0, 0);
             }
             to {
-                transform: translate3d(250px, 250px, 250px);
+                transform: perspective(500px) translate3d(250px, 250px, 250px);
             }
         }
     </style>
