@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        main {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            transition: opacity 1s ease-out;
+        }
+        .fadeOut {
+            opacity: 0;
+        }
+        .fadeIn {
+            opacity: 1;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button>show or hide</button>
+    <main></main>
+
+</div>
+<script>
+    var main = document.querySelector("main");
+    var btn = document.querySelector("button");
+    btn.addEventListener("click", function() {
+        var mainClasses = main.classList;
+
+        if(mainClasses.contains("fadeIn")) {
+            mainClasses.toggle("fadeIn");
+            mainClasses.toggle("fadeOut");
+            setTimeout(function() {
+                mainClasses.toggle("hide");
+            }, 500)
+        } else if(mainClasses.contains("fadeOut")) {
+            mainClasses.toggle("hide");
+            mainClasses.toggle("fadeOut");
+            mainClasses.toggle("fadeIn");
+
+//            setTimeout(function() {
+//                mainClasses.toggle("hide");
+//            }, 1000)
+        } else {
+            mainClasses.add("fadeOut");
+            setTimeout(function() {
+                mainClasses.add("hide");
+            }, 1000)
+        }
+    })
+</script>
+</body>
+</html>

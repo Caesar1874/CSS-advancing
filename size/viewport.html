@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 2000px;
+            height: 1000px;
+            background-color: darkseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            设备像素：改变屏幕分辨率时变化
+            <p>screen.width: <span class="screen-x"></span></p>
+            <p>screen.height: <span class="screen-y"></span></p>
+        </div>
+        <br>
+
+        <div>
+            视觉视口：包含水平和垂直滚动条(17px ?)
+            <p>window.innerWidth: <span class="visual-x"></span></p>
+            <p>window.innerHeight: <span class="visual-y"></span></p>
+        </div>
+        <br>
+
+        <div>
+            布局视口：不包含水平和垂直滚动条(elements 里的尺寸)
+            <p>document.documentElement.clientWidth: <span class="display-x"></span></p>
+            <p>document.documentElement.clientHeight: <span class="display-y"></span></p>
+        </div>
+        <br>
+
+        <div>
+            文档尺寸：
+            <p>document.documentElement.scrollWidth: <span class="scroll-x"></span></p>
+            <p>document.documentElement.scrollHeight: <span class="scroll-y"></span></p>
+        </div>
+        <br>
+
+        <div>
+            滚动条：
+            <p>window.pageXOffset: <span class="offset-x"></span></p>
+            <p>window.pageYOffset: <span class="offset-y"></span></p>
+        </div>
+        <br>
+    </div>
+    <script>
+        window.onload = function() {
+
+            var deviceX = document.querySelector(".screen-x");
+            var deviceY = document.querySelector(".screen-y");
+            var visualX = document.querySelector(".visual-x");
+            var visualY = document.querySelector(".visual-y");
+            var displayX = document.querySelector(".display-x");
+            var displayY = document.querySelector(".display-y");
+            var scrollX = document.querySelector(".scroll-x");
+            var scrollY = document.querySelector(".scroll-y");
+            var offsetX = document.querySelector('.offset-x');
+            var offsetY = document.querySelector('.offset-y');
+            var htmlEle = document.documentElement;
+
+            window.onresize = function(event) {
+                // 设备像素
+                deviceX.textContent = screen.width;
+                deviceY.textContent = screen.height;
+
+                // 视觉视口
+
+                visualX.textContent = window.innerWidth;
+                visualY.textContent = window.innerHeight;
+
+                // 布局视口
+
+                displayX.textContent = htmlEle.clientWidth;
+                displayY.textContent = htmlEle.clientHeight;
+
+                // 文档尺寸
+
+                scrollX.textContent = htmlEle.scrollWidth;
+                scrollY.textContent = htmlEle.scrollHeight;
+
+                // 滚动条
+                offsetX.textContent = window.pageXOffset;
+                offsetY.textContent = window.pageYOffset;
+            }
+            window.onscroll = function() {
+                // 滚动条
+                offsetX.textContent = window.pageXOffset;
+                offsetY.textContent = window.pageYOffset;
+            }
+
+        }
+    </script>
+</body>
+</html>
