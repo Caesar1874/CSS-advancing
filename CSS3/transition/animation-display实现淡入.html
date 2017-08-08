@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .example {
+            width: 300px;
+            height:200px;
+            background: url(mountaion.jpg);
+            animation: fade-out 2s;
+            display: none;
+        }
+
+        .show {
+            display: block;
+
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+<button>click me</button>
+<div class="example">
+
+</div>
+
+<script>
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function(e) {
+        const target = document.querySelector('.example')
+        target.classList.toggle('show')
+    })
+</script>
+</body>
+</html>

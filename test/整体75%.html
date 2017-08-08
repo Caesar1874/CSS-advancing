@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .inner {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur explicabo labore neque obcaecati perspiciatis! Beatae deserunt enim illum itaque iure magni mollitia reiciendis, rerum vitae voluptatibus. Iste, qui, voluptatem?</div>
+        <div class="inner">
+
+        </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid culpa dolor eligendi fugiat inventore libero maxime nemo neque nostrum nulla officiis placeat quae quia, quod reiciendis sapiente sint vel!</div>
+    </div>
+    <script>
+        const inner = document.querySelector('.inner')
+        inner.addEventListener('click', function(e){
+            console.log('click')
+            const target = e.target
+            const oldWidth = window.getComputedStyle(target).width
+            const oldHeight = window.getComputedStyle(target).height
+            console.log(oldWidth)
+            target.style.width = parseInt(oldWidth) * 0.75 + 'px'
+            target.style.height = parseInt(oldHeight) * 0.75 + 'px'
+        })
+    </script>
+</body>
+</html>

@@ -29,8 +29,41 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, quam.lorem10, consectetur adipisicing elit. Adipisci, quam.lorem10</div>
+
+<div class="demo">
+    <div class="wrapper">
+        <div class="body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque consectetur, culpa est laudantium perferendis quasi qui totam unde vel.
+        </div>
+    </div>
 </div>
+
+<div class="code">
+    <pre>
+        <code class="struct">
+
+        </code>
+    </pre>
+    <pre >
+        <code class="style">
+
+        </code>
+    </pre>
+</div>
+<script>
+    const selector = document.querySelector.bind(document)
+    console.log(selector)
+
+    const struct = selector('.struct')
+    const style = selector('.style')
+    console.log(struct, style)
+
+    const html = selector('.demo').innerHTML
+    const css = selector('style').innerHTML
+    console.log(struct, style, html, css)
+
+    struct.innerText = html
+    style.innerText = css
+</script>
 </body>
 </html>

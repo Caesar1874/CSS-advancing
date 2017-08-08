@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            overflow: auto;
+            min-height: 100%;
+            background: url(1.png) no-repeat ;
+            background-size: 100% 100%;
+
+        }
+        .exam{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="exam"></div>
+    <div>
+        设置给body 的背景会覆盖整个 html 元素
+        如果body 的尺寸大于 html , 背景只会覆盖 html
+            比如 设置 html,body height 100% , 但是body 实际上溢出的情况， 背景无法覆盖整个body的
+        通过 background-size 可以任意拉伸图片大小
+    </div>
+</body>
+</html>

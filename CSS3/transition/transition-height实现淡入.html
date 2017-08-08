@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .example {
+            width: 300px;
+            height:0;
+            background: url(mountaion.jpg);
+            transition: opacity  5s ease-out;
+            opacity: 0;
+        }
+
+        .show {
+            opacity: 1;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <button>click me</button>
+    <div class="example">
+
+    </div>
+
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function(e) {
+            const target = document.querySelector('.example')
+            target.classList.toggle('show')
+        })
+    </script>
+</body>
+</html>
