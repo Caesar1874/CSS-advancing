@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <title>transition example</title>
     <style>
-        div {
-            width: 1000px;
+        .transition-target {
             background-color: #000;
-            opacity: 1;
+            width: 220px;
 
-            transition-property: width, opacity;
-            transition-duration: 1s, 5s;
+            animation: slideDown 2s infinite;
         }
-        .transition{
-            width: 500px;
-            opacity: 0.5;
+        @keyframes slideDown {
+            from{
+                height: 220px;
+                transition-property: width, opacity;
+                transition-duration: 1s, 5s;
+            }
+            to{
+                height: 0;
+            }
         }
+
     </style>
 </head>
 <body>
-    <div class="transition-target">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cupiditate dolorum earum explicabo facere, ipsum quaerat repellendus sequi vel vero?
+    <div >
+        <img  class="transition-target" src="下载.jpg" alt="">
     </div>
 
     <script>
-        window.onload = function() {
-            var div = document.querySelector(".transition-target");
-            div.classList.add("transition");
-        }
     </script>
 </body>
 </html>
