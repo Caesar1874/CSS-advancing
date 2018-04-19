@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取或设置样式属性</title>
+    <style>
+        .example {
+            width: 200px;
+            height: 200px;
+            border: 1px solid green
+        }
+    </style>
+</head>
+<body>
+    <div class="example"></div>
+    <script>
+        var example = document.querySelector('.example')
+        example.addEventListener('click', function(event) {
+            // 获取
+            const width = window.getComputedStyle(this).width
+
+            // 设置
+            example.style.width = parseInt(width) + 10 + 'px'
+
+            console.log('current widht', window.getComputedStyle(this).width)
+        })
+    </script>
+</body>
+</html>

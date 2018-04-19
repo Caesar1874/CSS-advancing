@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作class</title>
+    <style>
+        .example {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .able{
+            background-color: green;
+        }
+        .disable {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="example"></div>
+
+    <script>
+        var example = document.querySelector('.example')
+        example.addEventListener('click', function(event) {
+            console.log('click', event.target)
+//            example.classList.toggle('able')
+            toggleTwoClass(example, 'able', 'disable')
+        })
+
+        // 在两个类之间切换
+        function toggleTwoClass(target, class1, class2) {
+            const neither =!( target.classList.contains(class1) || target.classList.contains(class2))
+            console.log(neither)
+            if(neither) {
+                target.classList.add(class1)
+            } else if(target.classList.contains(class1)){
+                target.classList.remove(class1)
+                target.classList.add(class2)
+            } else if(target.classList.contains(class2)){
+                // 可以与上一步合并
+                target.classList.remove(class2)
+                target.classList.add(class1)
+            }
+        }
+
+        // 在多个类之间切换
+        function toggleClasses(target, ...args) {
+            const neither = ! args.some(function (cls, index) {
+                return target.classList.contains(cls)
+            })
+            console.log(neither)
+            if(neither) {
+                target.classList.add(args[0])
+            } else {
+
+            }
+        }
+    </script>
+</body>
+</html>
