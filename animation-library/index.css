@@ -1,0 +1,103 @@
+
+
+.animate {
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards
+}
+
+.fade-down {
+    animation-name: fade-down
+}
+
+.fade-up {
+    animation-name: fade-up
+}
+
+.fade {
+    animation-name: fade
+}
+
+.fade-pulse {
+    animation-name: fade-pulse;
+    animation-duration: 2.7s
+}
+
+.fade-buzz {
+    animation-name: fade-buzz;
+    animation-duration: 2.05s
+}
+
+.fade-wobble {
+    animation-name: fade-wobble;
+    animation-duration: 3.8s
+}
+
+.rotate-in {
+    animation-name: rotate-in
+}
+
+.from-left-up {
+    animation-name: from-left-up
+}
+
+.from-left-down {
+    animation-name: from-left-down
+}
+
+.from-right-up {
+    animation-name: from-right-up
+}
+
+.from-right-down {
+    animation-name: from-right-down
+}
+
+
+.animate-delay-1 {
+    animation-delay: 1s;
+}
+
+.animate-delay-1_1 {
+    animation-delay: 1.1s;
+}
+
+.animate-delay-2 {
+    animation-delay: 2s;
+}
+
+.animate-delay-3 {
+    animation-delay: 3s;
+}
+
+.animate-delay-4 {
+    animation-delay: 4s;
+}
+
+.animate-delay-5 {
+    animation-delay: 5s;
+}
+
+.animate-delay-6 {
+    animation-delay: 6s;
+}
+
+.animate-delay-7 {
+    animation-delay: 7s;
+}
+
+.animate-delay-8 {
+    animation-delay: 8s;
+}
+
+.animate-delay-9 {
+    animation-delay: 9s;
+}
+
+
+
+
+
+

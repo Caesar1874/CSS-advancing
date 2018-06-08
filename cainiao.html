@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 10px solid black;
+            height: 300px;
+            overflow: hidden;
+            position: absolute;
+            top: 30px;
+            left: 100px;
+            width: 100%
+        }
+        p {
+            font-size: 100px;
+            margin: 0;
+            height: 300px;
+            width: 300px
+        }
+        .content p {
+            position: absolute;
+        }
+        @-webkit-keyframes anim1 {
+            0% {
+                top: 300px;
+                opacity: 1
+            }
+            25% {
+                top: 0px;
+                opacity: 1
+            }
+            50% {
+                top: 0px;
+                opacity: 1
+            }
+            75% {
+                top: -300px;
+                opacity: 0
+            }
+            100% {
+                top: 300px;
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes anim2 {
+
+            0% {
+                top: -300px;
+                opacity: 0
+            }
+            25% {
+                top: 300px;
+                opacity: 0
+            }
+            50% {
+                top: 0px;
+                opacity: 1
+            }
+            75% {
+                top: 0px;
+                opacity: 1
+            }
+            100% {
+                top: -300px;
+                opacity: 1
+            }
+        }
+
+        .content p:nth-child(1) {
+            background-color: red;
+        }
+        .content p:nth-child(2) {
+            background-color: yellow;
+        }
+        .content p:nth-child(1) {
+            -webkit-animation: anim1 4s linear infinite;
+        }
+        .content p:nth-child(2) {
+            -webkit-animation: anim1 4s linear infinite;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <p>第一</p>
+        <p>第二</p>
+
+    </div>
+</div>
+</body>
+</html>
